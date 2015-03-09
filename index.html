@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Instagramlogin : Tiny Instagram Auth Library for Android Apps">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Instagramlogin</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/bahacan19/InstagramLogin">View on GitHub</a>
+
+          <h1 id="project_title">Instagramlogin</h1>
+          <h2 id="project_tagline">Tiny Instagram Auth Library for Android Apps</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/bahacan19/InstagramLogin/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/bahacan19/InstagramLogin/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="instagramlogin" class="anchor" href="#instagramlogin" aria-hidden="true"><span class="octicon octicon-link"></span></a>InstagramLogin</h1>
+
+<p>Tiny Instagram Auth Library for Android Apps</p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>To start the login phase</p>
+
+<p><code>InstaLogin instaLogin = new InstaLogin(MainActivity.this,
+                        YOUR CIENT ID,
+                        YOUR CLIENT SECRET,
+                        YOUR SUCCESS URL);
+                instaLogin.login();
+                </code></p>
+
+<p>To handle the login data in your <code> onActivityResult </code></p>
+
+<p><code>
+ @Override </code></p>
+
+<pre><code>protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+    super.onActivityResult(requestCode, resultCode, data);
+
+    if (requestCode == Keys.LOGIN_REQ) {
+        // Make sure the request was successful
+        if (resultCode == RESULT_OK) {
+            Bundle bundle = data.getExtras();
+            stat.setText("Fullname : "+bundle.getString(InstaLogin.FULLNAME)+"\n"+
+            "UserName : "+bundle.getString(InstaLogin.USERNAME)+"\n"+
+                    "id : "+bundle.getString(InstaLogin.ID)+"\n"+
+                    "pICTURE : "+bundle.getString(InstaLogin.PROFILE_PIC)+"\n"+
+                    "access_token : "+bundle.getString(InstaLogin.ACCESS_TOKEN)+"\n"+
+                    "bıo : "+bundle.getString(InstaLogin.BIO)+"\n");
+        }
+    }
+}
+
+ &lt;/code&gt;
+
+
+ Contributions are welcomed !
+</code></pre>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p><a href="mailto:baha@nomadcomerce.com">baha@nomadcomerce.com</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Instagramlogin maintained by <a href="https://github.com/bahacan19">bahacan19</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
