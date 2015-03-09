@@ -1,6 +1,11 @@
 ## InstagramLogin
 Tiny Instagram Auth Library for Android Apps
 ## Usage
+
+add dependency to your build.gradle file
+
+<code> compile project(':instagramlogin')</code>
+
 To start the login phase
 
 <code>InstaLogin instaLogin = new InstaLogin(MainActivity.this,
