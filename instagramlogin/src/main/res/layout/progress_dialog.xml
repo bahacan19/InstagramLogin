@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <View
+            android:id="@+id/pd_circle1"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/blue_circle"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/pd_circle2"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/blue_circle"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/pd_circle3"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_margin="1dp"
+            android:background="@drawable/blue_circle"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Loading..."
+        android:textColor="#ff6f6f6f"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

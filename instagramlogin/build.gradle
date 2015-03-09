@@ -1,0 +1,77 @@
+apply plugin: 'com.android.library'
+/*apply plugin: 'maven'
+apply plugin: 'signing'
+version = "1.0.0"
+group = "com.vandalsoftware"
+configurations {
+    archives {
+        extendsFrom configurations.default
+    }
+}
+
+signing {
+    required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
+    sign configurations.archives
+}*/
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+}
+uploadArchives {
+    /*configuration = configurations.archives
+    repositories.mavenDeployer {
+        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+        repository(url: sonatypeRepo) {
+            authentication(userName: sonatypeUsername,
+                    password: sonatypePassword)
+        }
+
+        pom.project {
+            name 'Android Instagram Login'
+            packaging 'aar'
+            description 'Tiny Instagram Auth Library for Android Apps'
+            url 'https://github.com/VandalSoftware/android-cache-lib'
+
+            scm {
+                url 'scm:git@github.com:VandalSoftware/android-cache-lib.git'
+                connection 'scm:git@github.com:VandalSoftware/android-cache-lib.git'
+                developerConnection 'scm:git@github.com:VandalSoftware/android-cache-lib.git'
+            }
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+
+            developers {
+                developer {
+                    id 'jle'
+                    name 'Jonathan Le'
+                    email 'jonathanle@gmail.com'
+                }
+            }
+        }
+    }*/
+}

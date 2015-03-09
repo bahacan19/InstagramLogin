@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nomad.instagramlogin">
+
+    <application android:allowBackup="true" android:label="@string/app_name">
+<activity android:name=".Loginactivity"></activity>
+    </application>
+
+</manifest>
