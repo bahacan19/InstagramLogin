@@ -1,6 +1,6 @@
-# InstagramLogin
+## InstagramLogin
 Tiny Instagram Auth Library for Android Apps
-# Usage
+## Usage
 To start the login phase
 
 <code>InstaLogin instaLogin = new InstaLogin(MainActivity.this,
@@ -40,3 +40,5 @@ To handle the login data in your <code> onActivityResult </code>
      
      
      Contributions are welcomed !
+## License
+ Apache License
