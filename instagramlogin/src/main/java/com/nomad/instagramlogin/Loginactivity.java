@@ -58,7 +58,7 @@ public class Loginactivity extends Activity {
         CALLBACKURL = bundle.getString(Keys.CALLBACKURL_KEY);
         client_id = bundle.getString(Keys.CLIENT_ID_KEY);
         client_secret = bundle.getString(Keys.CLIENT_SECRET_KEY);
-        authURLString = AUTHURL + "?client_id=" + client_id + "&redirect_uri=" + CALLBACKURL + "&response_type=code&display=touch";
+        authURLString = AUTHURL + "?client_id=" + client_id + "&redirect_uri=" + CALLBACKURL + "&response_type=code&display=touch&scope=basic+likes+relationships";
         tokenURLString = TOKENURL + "?client_id=" + client_id + "&client_secret=" + client_secret + "&redirect_uri=" + CALLBACKURL + "&grant_type=authorization_code";
 //        view = new RelativeLayout(Loginactivity.this);
 
