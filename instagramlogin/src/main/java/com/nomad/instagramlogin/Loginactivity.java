@@ -170,7 +170,13 @@ public class Loginactivity extends Activity {
             if (url.startsWith(CALLBACKURL)) {
                 System.out.println(url);
                 String parts[] = url.split("=");
-                request_token = parts[1];  //This is your request token.
+                for (int i = 0; i < parts.length; i++) {
+                    String part = parts[i];
+                    if (part.contains("code") && i < parts.length - 1) {
+                        request_token = parts[i + 1];  //This is your request token.
+                        break;
+                    }
+                }
                 //InstagramLoginDialog.this.dismiss();
                 new AsyncTask<Void,Void,Void>(){
                     @Override
