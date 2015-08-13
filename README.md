@@ -1,4 +1,6 @@
 ## InstagramLogin
+
+[![Join the chat at https://gitter.im/bahacan19/InstagramLogin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bahacan19/InstagramLogin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Tiny Instagram Auth Library for Android Apps
 ## Usage
 
